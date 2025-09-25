@@ -10,8 +10,14 @@ template = """
   </head>
 
   <body>
-    <h1> Claculator Analog </h1>
-    <h2> For Devision --> /divide/10/2 </h2>
+    <h1> Calculator Analog </h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/divide/10/2">Divide</a>
+      <a href="/multiplication/10/10">Multiplication</a>
+      <a href="/sqrt/4">Square Root</a>
+    <nav>
+    <h2> For Division --> /divide/10/2 </h2>
     <h2> For Multiplication --> /multiplication/10/2 </h2>
     <h2> For Square Root --> /sqrt/4 </h2>
     {content}
