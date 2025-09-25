@@ -39,7 +39,7 @@ def multiplication(number_1, number_2):
     return template.replace("{content}", f"Here is your quotient: {result}")
 
 @app.route('/sqrt/<int:number_1>')
-def multiplication(number_1):
+def sqrt(number_1):
     if number_1 < 0:
         return template.replace("{content}", "Error: negative number")
     result = number_1 ** 0.5
