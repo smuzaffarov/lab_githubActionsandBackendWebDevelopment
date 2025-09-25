@@ -23,4 +23,4 @@ jobs:
               run: pytest -v
 
             - name: Install Flaks
-              run: pip install Flask pytest
+              run: pip install flask 
