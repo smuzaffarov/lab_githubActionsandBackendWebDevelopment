@@ -13,7 +13,7 @@ def test_divide(client):
 devision = [(a,b, a/b) for a in range(1, 10) for b in range (1, 10)]
 
 @pytest.mark.parametrize("a,b,expected", devision)
-def testDevisionParametrize(client, a, b, expected):
+def test_DevisionParametrize(client, a, b, expected):
     response = client.get(f"/divide/{a}/{b}")
     assert f"Here is your quotient: {expected}".encode() in response.data
 
@@ -21,15 +21,15 @@ def testDevisionParametrize(client, a, b, expected):
 devisionByZero = [(a, 0) for a in range(1, 10)]
 
 @pytest.mark.parametrize("a,b", devisionByZero)
-def testDevisionByZeroParametrize(client, a, b):
+def test_DevisionByZeroParametrize(client, a, b):
     response = client.get(f"/divide/{a}/{b}")
     assert b"Error: division by zero" in response.data
 
 
-multiplications = [(a,b, a*b) for a in range(0, 10) for b in range (1, 10)]
+multiplications = [(a,b, a*b) for a in range(0, 5) for b in range (0, 5)]
 
 @pytest.mark.parametrize("a,b,expected", multiplications)
-def numberMultiplications(client, a, b, expected):
+def test_numberMultiplications(client, a, b, expected):
     response = client.get(f"/multiplication/{a}/{b}")
     assert f"Here is your quotient: {expected}".encode() in response.data
 
