@@ -34,3 +34,8 @@ def divide(number_1, number_2):
     result = number_1 / number_2
     return template.replace("{content}", f"Here is your quotient: {result}")
 
+@app.route('/multiplication/<int:number_1>/<int:number_2>')
+def multiplication(number_1, number_2):
+    result = number_1 * number_2
+    return template.replace("{content}", f"Here is your quotient: {result}")
+
