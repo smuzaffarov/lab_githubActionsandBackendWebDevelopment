@@ -35,4 +35,9 @@ def test_numberMultiplications(client, a, b, expected):
 
 
 
+sqroot = [(a, a ** 0.5) for a in range(0, 5)]
 
+@pytest.mark.parametrize("a,expected", sqroot)
+def test_numberSqRoot(client, a, expected):
+    response = client.get(f"/sqrt/{a}")
+    assert f"Here is your quotient: {expected}".encode() in response.data
